@@ -42,7 +42,9 @@ class BottomSheetAdmin extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               child: Text(
                 "Tambah",
                 style: GoogleFonts.sora(fontSize: 16, color: Colors.white),

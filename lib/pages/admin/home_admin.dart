@@ -5,6 +5,7 @@ import 'package:wikusama_cafe/components/admin/bottom_sheet_admin.dart';
 import 'package:wikusama_cafe/components/admin/formbox_admin.dart';
 import 'package:wikusama_cafe/components/admin/information.dart';
 import 'package:wikusama_cafe/components/admin/role_dropdown.dart';
+import 'package:wikusama_cafe/components/admin/tambah_update_menu.dart';
 import 'package:wikusama_cafe/components/kasir/button_cart.dart';
 import 'package:wikusama_cafe/components/navbar_admin.dart';
 
@@ -40,7 +41,7 @@ class HomeAdminPage extends StatelessWidget {
                 Information(
                   title: "Total Meja",
                   total: 15,
-                  bottomSheetContent: Center(child: Text("User Bottom Sheet")),
+                  bottomSheetContent: Center(child: Text("Tambah Meja")),
                 )
               ],
             ),
@@ -53,13 +54,13 @@ class HomeAdminPage extends StatelessWidget {
                 Information(
                   title: "Total Transaksi",
                   total: 34,
-                  bottomSheetContent: Center(child: Text("User a Sheet")),
+                  bottomSheetContent: Center(child: Text("Lihat Transaksi")),
                 ),
                 Expanded(child: Container()),
                 Information(
                   title: "Total Menu",
                   total: 24,
-                  bottomSheetContent: Center(child: Text("User Bottom Sheet")),
+                  bottomSheetContent: TambahUpdateMenu(title: 'Tambah Menu',)
                 )
               ],
             ),
