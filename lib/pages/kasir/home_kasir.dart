@@ -77,23 +77,23 @@ class HomeKasirPage extends StatelessWidget {
     ];
 
     return DefaultTabController(
-      length: 2, // Number of tabs
+      length: 2,
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            // App bar section
             Container(
-              color: const Color.fromRGBO(27, 174, 118, 1),
+              color: Color.fromRGBO(27, 174, 118, 1),
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    AppbarKasir(title: 'Home',),
-                    const SizedBox(height: 10),
+                    AppbarKasir(
+                      title: 'Home',
+                    ),
+                    SizedBox(height: 10),
                     SearchBarKasir(),
-                    const SizedBox(height: 10),
-                    // Tab bar for Drinks and Food
+                    SizedBox(height: 10),
                   ],
                 ),
               ),
@@ -107,13 +107,10 @@ class HomeKasirPage extends StatelessWidget {
                 Tab(text: "Food"),
               ],
             ),
-            // TabBarView to switch between drinks and food lists
             Expanded(
               child: TabBarView(
                 children: [
-                  // Drinks list
                   buildMenuList(drinkItems),
-                  // Food list
                   buildMenuList(foodItems),
                 ],
               ),
@@ -125,7 +122,6 @@ class HomeKasirPage extends StatelessWidget {
     );
   }
 
-  // Function to build the menu list
   Widget buildMenuList(List<Map<String, dynamic>> items) {
     return ListView.builder(
       itemCount: items.length,
@@ -143,7 +139,6 @@ class HomeKasirPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Image of the item
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
@@ -154,7 +149,6 @@ class HomeKasirPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: 16),
-                  // Item name and description
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,20 +173,15 @@ class HomeKasirPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // Quantity controls
                   Row(
                     children: [
                       IconButton(
-                        onPressed: () {
-                          // Decrease quantity logic
-                        },
+                        onPressed: () {},
                         icon: const Icon(Icons.remove_circle_outline),
                       ),
-                      const Text('1'), // Display quantity here
+                      const Text('1'),
                       IconButton(
-                        onPressed: () {
-                          // Increase quantity logic
-                        },
+                        onPressed: () {},
                         icon: const Icon(Icons.add_circle_outline),
                       ),
                     ],

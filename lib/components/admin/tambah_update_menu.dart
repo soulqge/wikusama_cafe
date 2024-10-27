@@ -50,8 +50,8 @@ class TambahUpdateMenu extends StatelessWidget {
             ),
             Expanded(
               child: RoleDropdown(
-                label: "Role",
-                items: ["Makanan", "Minuman", "Snack"],
+                label: "Jenis",
+                items: ["Makanan", "Minuman"],
                 onChanged: (value) {
                   print("Selected role: $value");
                 },

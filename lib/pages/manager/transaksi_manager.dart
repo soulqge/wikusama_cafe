@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wikusama_cafe/components/admin/appbar_admin.dart';
-import 'package:wikusama_cafe/components/admin/tambah_update_menu.dart';
-import 'package:wikusama_cafe/components/navbar_admin.dart';
+import 'package:wikusama_cafe/components/navbar_manager.dart';
+import 'package:wikusama_cafe/components/search_bar.dart';
 
-class TransaksiAdminPage extends StatefulWidget {
-  const TransaksiAdminPage({super.key});
+class TransaksiManagerPage extends StatefulWidget {
+  const TransaksiManagerPage({super.key});
 
   @override
-  State<TransaksiAdminPage> createState() => _TransaksiAdminPageState();
+  State<TransaksiManagerPage> createState() => _TransaksiManagerPagePageState();
 }
 
-class _TransaksiAdminPageState extends State<TransaksiAdminPage> {
+class _TransaksiManagerPagePageState extends State<TransaksiManagerPage> {
   final List<Map<String, dynamic>> drinkItems = [
     {"id": "Zz9LB61SRT", "name": "Minuman", "status": "Lunas"},
     {"id": "pUo3zGDWgH", "name": "Minuman", "status": "Lunas"},
@@ -37,11 +37,53 @@ class _TransaksiAdminPageState extends State<TransaksiAdminPage> {
         body: Column(
           children: [
             Container(
-              color: const Color.fromRGBO(27, 174, 118, 1),
+              color: Color.fromRGBO(27, 174, 118, 1),
               child: Padding(
-                padding: const EdgeInsets.all(20),
+                padding: EdgeInsets.all(20),
                 child: Column(
-                  children: [AppbarAdmin(title: "Transaksi")],
+                  children: [
+                    AppbarAdmin(title: "Transaksi"),
+                    SizedBox(height: 10),
+                    SearchBarKasir(),
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8)
+                          ),
+                          child: Text(
+                            "19/1/2022",
+                            style: GoogleFonts.sora(
+                                fontSize: 16,
+                                color: Color.fromRGBO(27, 174, 118, 1)),
+                          ),
+                        ),
+                        Icon(Icons.arrow_right_alt, color: Colors.white,),
+                        Container(
+                          padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(8)
+                          ),
+                          child: Text(
+                            "19/1/2023",
+                            style: GoogleFonts.sora(
+                                fontSize: 16,
+                                color: Color.fromRGBO(27, 174, 118, 1)),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -66,7 +108,7 @@ class _TransaksiAdminPageState extends State<TransaksiAdminPage> {
             ),
           ],
         ),
-        bottomNavigationBar: BottomNavAdmin(selectedItem: 4),
+        bottomNavigationBar: BottomNavManager(selectedItem: 2),
       ),
     );
   }

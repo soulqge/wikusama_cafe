@@ -11,6 +11,9 @@ import 'package:wikusama_cafe/pages/kasir/invoice.dart';
 import 'package:wikusama_cafe/pages/kasir/profile_kasir.dart';
 import 'package:wikusama_cafe/pages/kasir/transaksi_berhasil.dart';
 import 'package:wikusama_cafe/pages/login.dart';
+import 'package:wikusama_cafe/pages/manager/home_manager.dart';
+import 'package:wikusama_cafe/pages/manager/transaksi_manager.dart';
+import 'package:wikusama_cafe/pages/manager/user_manager.dart';
 import 'package:wikusama_cafe/pages/splash.dart';
 import 'package:wikusama_cafe/pages/welcome.dart';
 
@@ -36,7 +39,12 @@ void main() {
       '/user_admin': (context) => UserAdminPage(),
       '/meja_admin' : (context) => MejaAdminPage(),
       '/menu_admin' : (context) => MenuAdminPage(),
-      '/transaksi_admin' : (context) => TransaksiAdminPage()
+      '/transaksi_admin' : (context) => TransaksiAdminPage(),
+
+      //manager
+      '/home_manager' : (context) => HomeManagerPage(),
+      '/user_manager' : (context) => UserManagerPage(),
+      '/transaki_manager' : (context) => TransaksiManagerPage()
 
     },
   ));

@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
                       SizedBox(height: 5),
                       Buttoncafe(
                         text: "Manager",
-                        route: "/home_kasir",
+                        route: "/home_manager",
                       ),
                       Spacer(),
                       Padding(

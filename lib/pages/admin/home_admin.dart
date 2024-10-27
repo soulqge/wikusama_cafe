@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:wikusama_cafe/components/admin/appbar_admin.dart';
 import 'package:wikusama_cafe/components/admin/bottom_sheet_admin.dart';
-import 'package:wikusama_cafe/components/admin/formbox_admin.dart';
 import 'package:wikusama_cafe/components/admin/information.dart';
-import 'package:wikusama_cafe/components/admin/role_dropdown.dart';
+import 'package:wikusama_cafe/components/admin/tambah_update_meja.dart';
 import 'package:wikusama_cafe/components/admin/tambah_update_menu.dart';
-import 'package:wikusama_cafe/components/kasir/button_cart.dart';
 import 'package:wikusama_cafe/components/navbar_admin.dart';
 
 class HomeAdminPage extends StatelessWidget {
@@ -41,7 +38,7 @@ class HomeAdminPage extends StatelessWidget {
                 Information(
                   title: "Total Meja",
                   total: 15,
-                  bottomSheetContent: Center(child: Text("Tambah Meja")),
+                  bottomSheetContent: TambahUpdateMeja(title: 'Tambah Meja',)
                 )
               ],
             ),

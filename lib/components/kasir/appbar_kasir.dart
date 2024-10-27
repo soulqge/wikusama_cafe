@@ -11,9 +11,12 @@ class AppbarKasir extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
-          Icons.menu,
-          color: Colors.white,
+        IconButton(
+          onPressed: (){},
+          icon: Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
         ),
         SizedBox(width: 15),
         Column(
@@ -33,9 +36,14 @@ class AppbarKasir extends StatelessWidget {
           ],
         ),
         Expanded(child: Container()),
-        Icon(
-          Icons.person_outline_rounded,
-          color: Colors.white,
+        IconButton(
+          onPressed: (){
+            Navigator.pushNamed(context, '/login');
+          },
+          icon: Icon(
+            Icons.person_outline_rounded,
+            color: Colors.white,
+          ),
         )
       ],
     );

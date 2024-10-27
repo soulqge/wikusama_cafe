@@ -26,7 +26,9 @@ class AppbarAdmin extends StatelessWidget {
         ),
         Expanded(child: Container()),
         IconButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.pushNamed(context, '/login');
+          },
           icon: Icon(
             Icons.person_outline_rounded,
             color: Colors.white,

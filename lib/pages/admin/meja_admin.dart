@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wikusama_cafe/components/admin/appbar_admin.dart';
+import 'package:wikusama_cafe/components/admin/tambah_update_meja.dart';
 import 'package:wikusama_cafe/components/navbar_admin.dart';
 
-class MejaAdminPage extends StatelessWidget {
+class MejaAdminPage extends StatefulWidget {
   MejaAdminPage({super.key});
 
+  @override
+  State<MejaAdminPage> createState() => _MejaAdminPageState();
+}
+
+class _MejaAdminPageState extends State<MejaAdminPage> {
   final List<Map<String, dynamic>> tables = [
     {"number": "1", "status": "Tersedia"},
     {"number": "2", "status": "Tersedia"},
@@ -13,6 +19,15 @@ class MejaAdminPage extends StatelessWidget {
     {"number": "4", "status": "Terisi"},
     {"number": "5", "status": "Tersedia"},
   ];
+
+  void _deleteTable(int index) {
+    setState(() {
+      tables.removeAt(index);
+      ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Meja deleted')),
+    );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +92,13 @@ class MejaAdminPage extends StatelessWidget {
                             width: 80,
                             height: 30,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                showModalBottomSheet(
+                                  context: context,
+                                  builder: (context) =>
+                                      TambahUpdateMeja(title: "Update Meja"),
+                                );
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.blue,
                                 foregroundColor: Colors.white,
@@ -93,7 +114,9 @@ class MejaAdminPage extends StatelessWidget {
                             width: 80,
                             height: 30,
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                _deleteTable(index);
+                              },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.red,
                                 foregroundColor: Colors.white,
