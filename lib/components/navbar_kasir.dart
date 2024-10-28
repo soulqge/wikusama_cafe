@@ -23,9 +23,6 @@ class _BottomNavKasirState extends State<BottomNavKasir> {
       Navigator.pushReplacementNamed(context, '/favorit_kasir');
     }
     else if (index == 2) {
-      Navigator.pushReplacementNamed(context, '/cart_kasir');
-    }
-    else if (index == 3) {
       Navigator.pushReplacementNamed(context, '/profile_kasir');
     }
   }
@@ -45,10 +42,6 @@ class _BottomNavKasirState extends State<BottomNavKasir> {
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite, ),
           label: 'Favorite'
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart, ),
-          label: 'Cart'
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.account_circle_outlined, ),
