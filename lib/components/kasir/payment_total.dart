@@ -26,7 +26,7 @@ class PaymentTotal extends StatelessWidget {
           ),
           SizedBox(width: 12),
           Text(
-            '₱ 74.53',
+            'Rp. 74.53',
             style:
                 GoogleFonts.sora(fontSize: 12, fontWeight: FontWeight.normal),
           ),

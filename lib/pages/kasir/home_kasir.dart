@@ -167,7 +167,7 @@ class HomeKasirPage extends StatelessWidget {
                         ),
                         const SizedBox(height: 26),
                         Text(
-                          '₱${item['price'].toStringAsFixed(2)}',
+                          'Rp. ${item['price'].toStringAsFixed(2)}',
                           style: GoogleFonts.poppins(fontSize: 16),
                         ),
                       ],

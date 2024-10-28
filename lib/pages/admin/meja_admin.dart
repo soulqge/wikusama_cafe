@@ -65,8 +65,6 @@ class _MejaAdminPageState extends State<MejaAdminPage> {
                                 fontSize: 24, fontWeight: FontWeight.bold),
                           ),
                           Container(
-                            height: 30,
-                            width: 95,
                             padding: EdgeInsets.symmetric(horizontal: 10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
@@ -89,8 +87,6 @@ class _MejaAdminPageState extends State<MejaAdminPage> {
                             ),
                           ),
                           Container(
-                            width: 80,
-                            height: 30,
                             child: ElevatedButton(
                               onPressed: () {
                                 showModalBottomSheet(
@@ -111,8 +107,6 @@ class _MejaAdminPageState extends State<MejaAdminPage> {
                             ),
                           ),
                           Container(
-                            width: 80,
-                            height: 30,
                             child: ElevatedButton(
                               onPressed: () {
                                 _deleteTable(index);

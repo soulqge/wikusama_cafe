@@ -57,7 +57,7 @@ class InvoicePage extends StatelessWidget {
                         fontWeight: FontWeight.w600),
                   ),
                   Text(
-                    '₱ 74.53',
+                    'Rp. 74.53',
                     style: GoogleFonts.sora(
                         fontSize: 16,
                         color: Color.fromRGBO(70, 70, 70, 1),

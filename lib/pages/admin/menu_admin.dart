@@ -78,7 +78,6 @@ class _MenuAdminPageState extends State<MenuAdminPage> {
     },
   ];
 
-  // Method to delete an item
   void _deleteItem(List<Map<String, dynamic>> items, int index) {
     setState(() {
       items.removeAt(index);
@@ -91,12 +90,11 @@ class _MenuAdminPageState extends State<MenuAdminPage> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2, // Number of tabs
+      length: 2, 
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Column(
           children: [
-            // App bar section
             Container(
               color: const Color.fromRGBO(27, 174, 118, 1),
               child: Padding(
@@ -104,7 +102,7 @@ class _MenuAdminPageState extends State<MenuAdminPage> {
                 child: Column(
                   children: [
                     AppbarAdmin(title: "Menu")
-                    // Tab bar for Drinks and Food
+
                   ],
                 ),
               ),
@@ -118,13 +116,12 @@ class _MenuAdminPageState extends State<MenuAdminPage> {
                 Tab(text: "Food"),
               ],
             ),
-            // TabBarView to switch between drinks and food lists
+
             Expanded(
               child: TabBarView(
                 children: [
-                  // Drinks list
+
                   buildMenuList(drinkItems, _deleteItem),
-                  // Food list
                   buildMenuList(foodItems, _deleteItem)
                 ],
               ),
@@ -137,7 +134,6 @@ class _MenuAdminPageState extends State<MenuAdminPage> {
   }
 }
 
-// Updated buildMenuList function with delete functionality
 Widget buildMenuList(List<Map<String, dynamic>> items, Function deleteItem) {
   return ListView.builder(
     itemCount: items.length,
@@ -176,14 +172,13 @@ Widget buildMenuList(List<Map<String, dynamic>> items, Function deleteItem) {
                 Row(
                   children: [
                     Text(
-                      '₱${item['price'].toStringAsFixed(2)}',
+                      'Rp. ${item['price'].toStringAsFixed(2)}',
                       style: GoogleFonts.poppins(fontSize: 16),
                     ),
                     SizedBox(width: 32),
                     Column(
                       children: [
                         Container(
-                          width: 80,
                           child: ElevatedButton(
                             onPressed: () {
                               showModalBottomSheet(
@@ -204,7 +199,6 @@ Widget buildMenuList(List<Map<String, dynamic>> items, Function deleteItem) {
                         ),
                         SizedBox(height: 8),
                         Container(
-                          width: 80,
                           child: ElevatedButton(
                             onPressed: () => deleteItem(items, index),
                             style: ElevatedButton.styleFrom(

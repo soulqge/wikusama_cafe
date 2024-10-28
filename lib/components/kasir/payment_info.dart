@@ -21,7 +21,7 @@ class PaymentInfo extends StatelessWidget {
         ),
         Expanded(child: Container()),
         Text(
-          '₱ $price',
+          'Rp. $price',
           style: GoogleFonts.sora(
               fontSize: 16,
               color: Color.fromRGBO(70, 70, 70, 1),
